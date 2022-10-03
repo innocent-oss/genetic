@@ -14,9 +14,9 @@ import matplotlib.pyplot as plt
 torch.multiprocessing.set_sharing_strategy('file_system')
 import numpy as np
 import sys
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train')
+sys.path.append('./genetic/code/train')
 from train_models_parr import train_population_parr
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/evolve/util1')
+sys.path.append('./genetic/code/evolve/util1')
 from util2 import reload_population_ckpt, find_train_inds, check_dir, save_population_ckpt, get_gene_len, cxMultiPoint
 import torch
 
@@ -49,8 +49,8 @@ def evolve():
     resume_train = False
     train_set_name = 'DRIVE'
     valid_set_name = 'DRIVE'
-    train_set_root = os.path.join(os.path.abspath('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main'), 'dataset', 'trainset', train_set_name)
-    valid_set_root = os.path.join(os.path.abspath('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main'), 'dataset', 'validset', valid_set_name)
+    train_set_root = os.path.join(os.path.abspath('./genetic'), 'dataset', 'trainset', train_set_name)
+    valid_set_root = os.path.join(os.path.abspath('./genetic'), 'dataset', 'validset', valid_set_name)
 
     en_node_num_list = [en_node_num for _ in range(sample_num + 1)]
     de_node_num_list = [de_node_num for _ in range((sample_num))]
@@ -213,7 +213,7 @@ def evolve():
     best_ind = tools.selBest(population, parents_num)
     best_inddividuals = deepcopy(best_ind[:])
     pickle_file = open(
-        os.path.join(os.path.abspath('/content/exps/test/pickle'), 'exps/{}/pickle/gens_{} best_individuals_code.pkl'.format(exp_name, gens)),
+        os.path.join(os.path.abspath('.'), 'exps/{}/pickle/gens_{} best_individuals_code.pkl'.format(exp_name, gens)),
         'wb')
     pickle.dump(best_inddividuals, pickle_file)
     pickle_file.close()
