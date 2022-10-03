@@ -13,8 +13,8 @@ from torchvision.transforms import functional as TF
 from torchvision.datasets.utils import list_files
 
 import sys
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/dataset/util')
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/dataset')
+sys.path.append('./genetic/code/dataset/util')
+sys.path.append('./genetic/dataset')
 class DRIVE_dataset(Dataset):
 
     def __init__(self, data_root, train=True, transforms=None):
