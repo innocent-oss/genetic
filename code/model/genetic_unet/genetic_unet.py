@@ -4,7 +4,7 @@ import numpy as np
 from scipy.special import comb
 
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/model/genetic_unet')
+sys.path.append(r'./genetic/code/model/genetic_unet')
 from blocks import get_func
 
 def count_param(model):
@@ -30,7 +30,7 @@ def flatten(input_list):
                 break
     return output_list
     
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/model/genetic_unet')
+sys.path.append('./genetic/code/model/genetic_unet')
 def check_active(node_num, connect_gene):
     active = [None for _ in range(node_num)]
     node_connect = []
@@ -77,7 +77,7 @@ def check_active(node_num, connect_gene):
     if sum([1 for act in active if act is not None]) == 0:
         out_index = [0]
     return active, pre_index, out_index
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/model/genetic_unet')
+sys.path.append('./genetic/code/model/genetic_unet')
 class UnetBlock(nn.Module):
     def __init__(self, base_ch, active, pre_index, out_index, node_func_type):
         super(UnetBlock, self).__init__()
@@ -135,7 +135,7 @@ The gene of the searhed architecture on DRIVE is  [0, 1, 1, 1, 0, 0, 1, 1, 0, 0,
                                          1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1,
                                          1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1]
 """
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/util/util.py')
+sys.path.append(r'./genetic/code/train/util/util.py')
 class Net(nn.Module):
     def __init__(self, gene, model_settings, in_ch=3, out_ch=1):
         super(Net, self).__init__()
