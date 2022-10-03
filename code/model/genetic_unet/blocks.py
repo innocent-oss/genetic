@@ -518,7 +518,7 @@ class ConvBlock(nn.Module):
         out = self.conv(x)
         return out
 import sys
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/model/genetic_unet/genetic_unet.py')
+sys.path.append('./genetic/code/model/genetic_unet/genetic_unet.py')
 def get_func(func_type, in_channel=16, out_channel=16):
     if func_type == 'conv_relu_3':
         func = ConvBlock(in_ch=in_channel, out_ch=out_channel, ins=False, ks=3, mish=False, pre_act=False)
@@ -657,7 +657,7 @@ def get_func(func_type, in_channel=16, out_channel=16):
 if __name__ == '__main__':
     pass
     import sys
-    sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/model/genetic_unet')
+    sys.path.append('./genetic/code/model/genetic_unet')
     from genetic_unet import UnetBlock, check_active
     import numpy as np
 
