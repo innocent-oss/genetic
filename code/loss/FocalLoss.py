@@ -6,7 +6,7 @@ from __future__ import print_function
 import torch
 from torch import nn
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/loss')
+sys.path.append(r'./genetic/code/loss')
 
 class FocalLossForSigmoid(nn.Module):
     def __init__(self, gamma=2, alpha=0.55, reduction='mean'):
