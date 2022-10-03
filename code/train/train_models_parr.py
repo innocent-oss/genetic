@@ -1,17 +1,17 @@
 import numpy as np
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/model')
+sys.path.append(r'./genetic/code/model')
 from genetic_unet.genetic_unet import Net
 import pickle
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/util')
+sys.path.append(r'./genetic/code/train/util')
 from util import NoDaemonProcessPool, util_function
 import sys
 import torch, random
 import os
 import multiprocessing as mp
 
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/train_models_parr.py')
+sys.path.append(r'./genetic/code/train/train_models_parr.py')
 
 def train_population_parr(train_list, gen_num, population, batch_size, devices, epochs, exp_name, train_set_name,
                           valid_set_name, train_set_root, valid_set_root,
