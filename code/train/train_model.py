@@ -3,15 +3,15 @@ from torch.utils.data import DataLoader
 
 from tqdm import tqdm
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/loss')
+sys.path.append(r'./genetic/code/loss')
 from FocalLoss import FocalLossForSigmoid
 import torch
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics')
+sys.path.append(r'./genetic/code/metrics')
 from calculate_metrics import calculate_metrics
 import shutil
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics/average_meter.py')
+sys.path.append(r'./genetic/code/metrics/average_meter.py')
 from average_meter import AverageMeter
 import torch.multiprocessing
 from torch.nn.utils.clip_grad import clip_grad_norm_
@@ -20,14 +20,14 @@ import sys
 import numpy as np
 import random
 from thop import profile
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/util')
+sys.path.append('./genetic/code/train/util')
 from get_optimizer import get_optimizer
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/dataset/util')
+sys.path.append('./genetic/code/dataset/util')
 from get_datasets import get_datasets
 import multiprocessing as mp
 
 import sys
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/util/util.py')
+sys.path.append('./genetic/code/train/util/util.py')
 def train_one_model(optimizer_name, learning_rate, l2_weight_decay, gen_num, ind_num, model, batch_size, epochs, device,
                     train_set_name, valid_set_name,
                     train_set_root, valid_set_root, exp_name,
