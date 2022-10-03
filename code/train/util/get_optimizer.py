@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/train_model.py')
+sys.path.append(r'./genetic/code/train/train_model.py')
 def get_optimizer(optimizer_name, params, learning_rate, l2_weight_decay):
     if optimizer_name == 'SGD':
         from torch.optim import SGD
@@ -14,7 +14,7 @@ def get_optimizer(optimizer_name, params, learning_rate, l2_weight_decay):
         optimizer = RMSprop(params=params, lr=learning_rate, weight_decay=l2_weight_decay)
 
     elif optimizer_name == 'Lookahead(Adam)':
-        sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/util/optimizer_plus')
+        sys.path.append('./genetic/code/train/util/optimizer_plus')
         from optimizer_plus.optimizer import Lookahead
         from torch.optim import Adam
         base_optimizer = Adam(params=params, lr=learning_rate, weight_decay=l2_weight_decay)
