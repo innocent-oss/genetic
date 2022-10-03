@@ -1,21 +1,21 @@
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics')
+sys.path.append(r'./genetic/code/metrics')
 from binary_confusion_matrix import get_binary_confusion_matrix, get_threshold_binary_confusion_matrix
 from binary_statistical_metrics import get_accuracy, get_true_positive_rate, get_true_negative_rate, \
     get_precision, get_f1_socre, get_iou
 from dice_coefficient import hard_dice
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics/pr_curve.py')
+sys.path.append(r'./genetic/code/metrics/pr_curve.py')
 from pr_curve import get_pr_curve
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics/calculate_metrics.py')
+sys.path.append('./genetic/code/metrics/calculate_metrics.py')
 from roc_curve import get_auroc, get_roc_curve
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/util')
+sys.path.append('./genetic/code/util')
 from numpy_utils import tensor2numpy
 import numpy as np
 from copy import deepcopy
 
 # np.seterr(divide='ignore', invalid='ignore')
 import sys
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/train_model.py')
+sys.path.append('./genetic/code/train/train_model.py')
 def calculate_metrics( preds, targets, device,config=None):
     curr_TP, curr_FP, curr_TN, curr_FN = get_binary_confusion_matrix(
         input_=preds, target=targets, device=device, pixel=0,
