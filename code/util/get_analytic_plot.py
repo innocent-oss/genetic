@@ -8,7 +8,7 @@ from __future__ import print_function
 
 import torch
 import sys
-sys.path.append(r'Genetic-U-Net-main/code/metrics/binary_confusion_matrix.py')
+sys.path.append(r'./genetic/code/metrics/binary_confusion_matrix.py')
 from binary_confusion_matrix import get_binary_confusion_matrix
 
 
