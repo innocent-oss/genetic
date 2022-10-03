@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/model/genetic_unet/genetic_unet.py')
+sys.path.append(r'./genetic/code/model/genetic_unet/genetic_unet.py')
 from genetic_unet.genetic_unet import Net
 
 import multiprocessing as mp
@@ -7,10 +7,10 @@ import multiprocessing.pool
 import torch
 from deap import tools
 import time
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train')
+sys.path.append(r'./genetic/code/train')
 from train_model import train_one_model
 
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train')
+sys.path.append(r'./genetic/code/train')
 class NoDaemonProcess(mp.Process):
 
     def _get_daemon(self):
@@ -61,12 +61,12 @@ def func_try(population, ind_num, device, model_settings):
 
     return model, device
 
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/train_model.py')
+sys.path.append('./genetic/code/train/train_model.py')
 def help_func(optimizer_name, learning_rate, l2_weight_decay, gen_num, ind_num, model, batch_size, epochs, device,
               train_set_name, valid_set_name,
               train_set_root, valid_set_root, exp_name,
               population, model_settings):
-    sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/train_model.py')
+    sys.path.append('./genetic/code/train/train_model.py')
     metrics, flag = train_one_model(optimizer_name, learning_rate, l2_weight_decay, gen_num, ind_num, model, batch_size,
                                     epochs, device, train_set_name,
                                     valid_set_name,
