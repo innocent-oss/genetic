@@ -14,9 +14,9 @@ import matplotlib.pyplot as plt
 torch.multiprocessing.set_sharing_strategy('file_system')
 import numpy as np
 import sys
-sys.path.append('./genetic/code/train')
+sys.path.append(r'./genetic/code/train')
 from train_models_parr import train_population_parr
-sys.path.append('./genetic/code/evolve/util1')
+sys.path.append(r'./genetic/code/evolve/util1')
 from util2 import reload_population_ckpt, find_train_inds, check_dir, save_population_ckpt, get_gene_len, cxMultiPoint
 import torch
 
