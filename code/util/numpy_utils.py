@@ -22,7 +22,7 @@ def tensor2float(input_):
     return output
 
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics')
+sys.path.append(r'./genetic/code/metrics')
 def tensor2numpy(input_):
     """
     Convert a torch tensor to numpy array
@@ -48,7 +48,7 @@ def tensor2numpy(input_):
     return output
 
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics/pr_curve.py')
+sys.path.append(r'./genetic/code/metrics/pr_curve.py')
 def flatten_tensor(input_):
     """
     Flatten PyTorch tensor input into numpy ndarray for using numpy and
