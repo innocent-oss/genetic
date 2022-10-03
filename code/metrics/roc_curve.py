@@ -6,10 +6,10 @@ from sklearn.metrics import roc_curve
 from sklearn.metrics import roc_auc_score
 
 import sys
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/util/numpy_utils.py')
+sys.path.append('./genetic/code/util/numpy_utils.py')
 from numpy_utils import flatten_tensor
 
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics')
+sys.path.append('./genetic/code/metrics')
 def get_roc_curve(preds, targets):
     """
     Get ROC curve
@@ -33,7 +33,7 @@ def get_roc_curve(preds, targets):
 
     return fpr, tpr, thresholds
 
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics')
+sys.path.append('./genetic/code/metrics')
 
 def get_auroc(preds, targets):
     """
