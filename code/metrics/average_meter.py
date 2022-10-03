@@ -7,7 +7,7 @@ from __future__ import division
 from __future__ import print_function
 
 import sys
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/train_model.py')
+sys.path.append('./genetic/code/train/train_model.py')
 class AverageMeter(object):
     """
     Class to be an average meter
