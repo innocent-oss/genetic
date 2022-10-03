@@ -3,7 +3,7 @@ import torch
 import itertools as it
 from torch.optim.optimizer import Optimizer
 import sys
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/train/util')
+sys.path.append('./genetic/code/train/util')
 class Lookahead(Optimizer):
     def __init__(self, base_optimizer,alpha=0.5, k=6):
         if not 0.0 <= alpha <= 1.0:
