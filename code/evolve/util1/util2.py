@@ -5,7 +5,7 @@ from scipy.special import comb
 import random
 
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/evolve/evolve.py')
+sys.path.append(r'./genetic/code/evolve/evolve.py')
 def find_train_inds(population):
     i = 0
     train_list = []
