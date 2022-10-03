@@ -13,7 +13,7 @@ from torchvision.transforms import functional as TF
 from torch.nn import functional as F
 #device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 import sys
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics/calculate_metrics.py')
+sys.path.append('./genetic/code/metrics/calculate_metrics.py')
 def get_binary_confusion_matrix(input_, target, device, pixel = None, threshold=0.5,
                                 reduction='sum'):
     """
@@ -76,7 +76,7 @@ def get_binary_confusion_matrix(input_, target, device, pixel = None, threshold=
 
     return true_positive, false_positive, true_negative, false_negative
 import sys
-sys.path.append('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics/calculate_metrics.py')
+sys.path.append('./genetic/code/metrics/calculate_metrics.py')
 def get_threshold_binary_confusion_matrix(input_, target, device, pixel = None, reduction='sum'):
     """
     Get binary confusion matrix
@@ -148,16 +148,16 @@ def get_threshold_binary_confusion_matrix(input_, target, device, pixel = None, 
 
 if __name__ == '__main__':
     import sys
-    sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics')
-    predict = Image.open('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics/prediction-00.png','r').convert('L')
+    sys.path.append(r'./genetic/code/metrics')
+    predict = Image.open('./genetic/code/metrics/prediction-00.png','r').convert('L')
 
-    target = Image.open('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics/target-00.png').convert('1')
+    target = Image.open('./genetic/code/metrics/target-00.png').convert('1')
     input_ = TF.to_tensor(predict)
     target = TF.to_tensor(target)
     
-    predict_1 = Image.open('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics/prediction-01.png').convert('L')
+    predict_1 = Image.open('./genetic/code/metrics/prediction-01.png').convert('L')
     
-    target_1 = Image.open('/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics/target-01.png').convert('1')
+    target_1 = Image.open('./genetic/code/metrics/target-01.png').convert('1')
 
     input_1 = TF.to_tensor(predict_1)
 
