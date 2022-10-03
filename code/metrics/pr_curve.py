@@ -5,11 +5,11 @@ Precision recall curve and area under it
 
 from sklearn.metrics import precision_recall_curve
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/util')
+sys.path.append(r'./genetic/code/util')
 from numpy_utils import flatten_tensor
 
 import sys
-sys.path.append(r'/content/drive/MyDrive/Genetic-U-Net-main(1)/Genetic-U-Net-main/code/metrics')
+sys.path.append(r'./genetic/code/metrics')
 def get_pr_curve(preds, targets):
     """
     Get precision recall curve
